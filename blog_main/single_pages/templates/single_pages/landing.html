@@ -4,4 +4,10 @@
     <title>홈페이지 대문</title>
 {% endblock %}
 {% block main_area %}
-    <h1>대문페이지!</h1>{% endblock %}
+    <h1>대문페이지!</h1>
+    {% for post in recent_posts %}
+        <p>{{ post.title }} - {{ post.content | truncatewords:30 }}</p>
+
+    {% endfor %}
+
+{% endblock %}

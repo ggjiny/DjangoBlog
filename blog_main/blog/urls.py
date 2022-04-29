@@ -10,4 +10,5 @@ urlpatterns = [
     path('tag/<str:slug>/', views.show_tag_posts),
     path('create_post/', views.PostCreate.as_view()),
     path('update_post/<int:pk>/', views.PostUpate.as_view()),
+    path('<int:pk>/addcomment/', views.add_comment),
 ]
